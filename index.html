@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <meta name="description" content="Konversi angka menjadi terbilang Bahasa Indonesia secara instan dan privat.">
+  <meta name="keywords" content="terbilang, konverter angka, angka ke kata, terbilang rupiah, terbilang online">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:title" content="Terbilang.id — Konverter Angka">
+  <meta property="og:description" content="Konversi angka menjadi terbilang Bahasa Indonesia secara instan dan privat.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Terbilang.id — Konverter Angka">
+  <meta name="twitter:description" content="Konversi angka menjadi terbilang Bahasa Indonesia secara instan dan privat.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%234169e1'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='44' font-weight='700' text-anchor='middle' fill='white'%3ET%3C/text%3E%3C/svg%3E">
+  <title>Terbilang.id — Konverter Angka</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Terbilang.id — Konverter Angka",
+      "description": "Konversi angka menjadi terbilang Bahasa Indonesia secara instan dan privat.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "inLanguage": "id-ID",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "IDR"
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Terbilang.id beranda">
+        <span class="brand-mark" aria-hidden="true">T<span>.</span></span>
+        <span>terbilang<span class="brand-dot">.id</span></span>
+      </a>
+      <div class="topbar-actions">
+        <span class="privacy-note"><span class="privacy-dot"></span>Diproses privat di perangkat Anda</span>
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Aktifkan tema gelap" title="Ganti tema">
+          <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.5 8.5 0 1 0 20.2 15.1Z"></path></svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="eyebrow"><span class="eyebrow-line"></span>ANGKA JADI KATA, TANPA RIBET</div>
+        <h1 id="page-title">Ubah angka jadi<br><span>kata-kata.</span></h1>
+        <p class="hero-copy">Konversi angka ke terbilang Bahasa Indonesia dengan cepat, akurat, dan sepenuhnya privat.</p>
+      </section>
+
+      <section class="workspace" aria-label="Konverter angka terbilang">
+        <div class="converter-card">
+          <div class="card-heading">
+            <div>
+              <h2>Masukkan angka</h2>
+              <p>Ketik atau pilih contoh untuk memulai</p>
+            </div>
+            <span class="live-indicator"><span></span>REAL-TIME</span>
+          </div>
+
+          <div class="mode-row">
+            <span class="field-label">MODE</span>
+            <div class="segmented" role="group" aria-label="Mode konversi">
+              <button class="mode-button active" id="plain-mode" type="button" aria-pressed="true">Angka biasa</button>
+              <button class="mode-button" id="currency-mode" type="button" aria-pressed="false"><span class="rupiah-symbol">Rp</span> Mata uang</button>
+            </div>
+          </div>
+
+          <label class="field-label input-label" for="number-input">ANGKA YANG INGIN DIKONVERSI</label>
+          <div class="input-wrap" id="input-wrap">
+            <span class="currency-prefix" id="currency-prefix" aria-hidden="true">Rp</span>
+            <input id="number-input" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="Contoh: 1.234.567,89" aria-describedby="input-hint digit-count scale-label">
+            <button id="clear-input" class="clear-button" type="button" aria-label="Hapus angka" title="Hapus angka" hidden>×</button>
+          </div>
+          <div class="input-meta">
+            <span id="input-hint">Gunakan koma untuk angka desimal</span>
+            <span class="badges"><span id="digit-count" class="badge">0 digit</span><span id="scale-label" class="badge scale-badge">Skala: —</span></span>
+          </div>
+
+          <div class="presets">
+            <span class="field-label">COBA CONTOH</span>
+            <div class="preset-list">
+              <button class="preset-chip" type="button" data-value="1000" data-mode="plain">Seribu</button>
+              <button class="preset-chip" type="button" data-value="2500000" data-mode="plain">Jutaan</button>
+              <button class="preset-chip" type="button" data-value="12005" data-decimal="05" data-mode="plain">Desimal</button>
+              <button class="preset-chip" type="button" data-value="1500" data-decimal="50" data-mode="currency">Rupiah + sen</button>
+            </div>
+          </div>
+        </div>
+
+        <section class="result-card" id="result-card" aria-labelledby="result-title" aria-live="polite">
+          <div class="result-topline">
+            <div class="result-title-wrap">
+              <span class="result-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M5 4.5A2.5 2.5 0 0 1 7.5 2H20v17H7.5A2.5 2.5 0 0 0 5 21.5z"></path><path d="M5 4.5v17m4-15h7m-7 4h7"></path></svg>
+              </span>
+              <div><h2 id="result-title">Hasil terbilang</h2><p id="result-subtitle">Teks akan muncul di sini</p></div>
+            </div>
+            <span class="result-status" id="result-status">MENUNGGU INPUT</span>
+          </div>
+          <div class="result-output empty" id="result-output" tabindex="0">Angka Anda akan menjadi kata-kata di sini.</div>
+          <div class="result-divider"></div>
+          <div class="result-controls">
+            <label class="select-label" for="case-select">GAYA TULISAN
+              <select id="case-select">
+                <option value="sentence">Sentence case</option>
+                <option value="title">Title Case</option>
+                <option value="lower">lowercase</option>
+                <option value="upper">UPPERCASE</option>
+              </select>
+            </label>
+            <label class="sen-toggle" id="sen-toggle-wrap" for="sen-toggle">
+              <input id="sen-toggle" type="checkbox" checked>
+              <span class="toggle-track" aria-hidden="true"></span>
+              <span>Baca sen</span>
+            </label>
+            <div class="result-actions">
+              <button class="action-button" id="speak-button" type="button" disabled>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7m3-10a9 9 0 0 1 0 13"></path></svg>
+                <span>Dengarkan</span>
+              </button>
+              <button class="action-button copy-button" id="copy-button" type="button" disabled>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"></rect><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"></path></svg>
+                <span>Salin teks</span>
+              </button>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="history-section" aria-labelledby="history-title">
+        <div class="history-heading">
+          <div><span class="field-label">TERSIMPAN DI PERANGKAT INI</span><h2 id="history-title">Riwayat terakhir</h2></div>
+          <button id="clear-history" class="text-button" type="button" hidden>Hapus riwayat</button>
+        </div>
+        <div id="history-list" class="history-list"></div>
+        <p class="history-empty" id="history-empty">Hasil konversi Anda akan tersimpan di sini.</p>
+      </section>
+
+      <footer class="footer"><span>© 2025 Terbilang.id</span><span>Teliti dalam setiap angka. <span class="footer-heart">♥</span></span></footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="terbilang.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
